@@ -10,11 +10,13 @@ import UIKit
 final class BaseNavigationController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        overrideUserInterfaceStyle = .dark
+        
+        overrideUserInterfaceStyle = GeneralPreferences.shared.userInterfaceStyle
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
         setNeedsStatusBarAppearanceUpdate()
     }
 }

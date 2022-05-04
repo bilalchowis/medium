@@ -22,6 +22,8 @@
 		D5F97A4C2823191E00005762 /* PresentationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F97A4B2823191E00005762 /* PresentationProtocol.swift */; };
 		D5F97A4E282319B200005762 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F97A4D282319B200005762 /* BaseNavigationController.swift */; };
 		D5F97A50282319CC00005762 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F97A4F282319CC00005762 /* BaseViewController.swift */; };
+		D5F97A5228231A4600005762 /* GeneralPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F97A5128231A4600005762 /* GeneralPreferences.swift */; };
+		D5F97A5428231A9A00005762 /* StorageKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F97A5328231A9A00005762 /* StorageKey.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		D5F97A4B2823191E00005762 /* PresentationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationProtocol.swift; sourceTree = "<group>"; };
 		D5F97A4D282319B200005762 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		D5F97A4F282319CC00005762 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		D5F97A5128231A4600005762 /* GeneralPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralPreferences.swift; sourceTree = "<group>"; };
+		D5F97A5328231A9A00005762 /* StorageKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageKey.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				D5F97A482823190B00005762 /* Base */,
+				D5F97A5528231AA400005762 /* Common */,
 				D5F97A382823182A00005762 /* Managers */,
 				D5F97A34282317D000005762 /* Modules */,
 				D5F97A432823186200005762 /* Extensions */,
@@ -134,6 +139,7 @@
 		D5F97A382823182A00005762 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				D5F97A5128231A4600005762 /* GeneralPreferences.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -156,6 +162,14 @@
 				D5F97A4F282319CC00005762 /* BaseViewController.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		D5F97A5528231AA400005762 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				D5F97A5328231A9A00005762 /* StorageKey.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5F97A50282319CC00005762 /* BaseViewController.swift in Sources */,
+				D5F97A5428231A9A00005762 /* StorageKey.swift in Sources */,
 				D5F97A402823184D00005762 /* UserPickerInteractor.swift in Sources */,
 				D5F97A4A2823191400005762 /* BaseWireframe.swift in Sources */,
 				D5F97A3A2823183B00005762 /* UserPickerViewController.swift in Sources */,
@@ -241,6 +256,7 @@
 				D5F97A4C2823191E00005762 /* PresentationProtocol.swift in Sources */,
 				D5F97A422823185400005762 /* UserPickerRouter.swift in Sources */,
 				D5F97A472823188700005762 /* View+Layout.swift in Sources */,
+				D5F97A5228231A4600005762 /* GeneralPreferences.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
