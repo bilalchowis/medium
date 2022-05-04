@@ -27,6 +27,7 @@
 		D5F97A5728231B3500005762 /* SceneManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F97A5628231B3500005762 /* SceneManager.swift */; };
 		D5F97A5928231CAF00005762 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5F97A5828231CAF00005762 /* Colors.xcassets */; };
 		D5F97A5B28231CC500005762 /* Color+AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F97A5A28231CC500005762 /* Color+AppColors.swift */; };
+		D5F97A5E28231DE100005762 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F97A5D28231DE100005762 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		D5F97A5628231B3500005762 /* SceneManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneManager.swift; sourceTree = "<group>"; };
 		D5F97A5828231CAF00005762 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		D5F97A5A28231CC500005762 /* Color+AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+AppColors.swift"; sourceTree = "<group>"; };
+		D5F97A5D28231DE100005762 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,9 +88,10 @@
 			children = (
 				D5F97A482823190B00005762 /* Base */,
 				D5F97A5528231AA400005762 /* Common */,
-				D5F97A382823182A00005762 /* Managers */,
-				D5F97A34282317D000005762 /* Modules */,
-				D5F97A432823186200005762 /* Extensions */,
+				D5F97A382823182A00005762 /* Manager */,
+				D5F97A5C28231DC900005762 /* Model */,
+				D5F97A34282317D000005762 /* Module */,
+				D5F97A432823186200005762 /* Extension */,
 				D5F97A35282317DE00005762 /* Resources */,
 				D5F97A2D282316E500005762 /* Info.plist */,
 			);
@@ -104,14 +107,14 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
-		D5F97A34282317D000005762 /* Modules */ = {
+		D5F97A34282317D000005762 /* Module */ = {
 			isa = PBXGroup;
 			children = (
 				D5F97A332823178300005762 /* Main */,
 				D5F97A36282317E500005762 /* Launch */,
 				D5F97A372823181C00005762 /* UserPicker */,
 			);
-			path = Modules;
+			path = Module;
 			sourceTree = "<group>";
 		};
 		D5F97A35282317DE00005762 /* Resources */ = {
@@ -143,23 +146,23 @@
 			path = UserPicker;
 			sourceTree = "<group>";
 		};
-		D5F97A382823182A00005762 /* Managers */ = {
+		D5F97A382823182A00005762 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
 				D5F97A5128231A4600005762 /* GeneralPreferences.swift */,
 				D5F97A5628231B3500005762 /* SceneManager.swift */,
 			);
-			path = Managers;
+			path = Manager;
 			sourceTree = "<group>";
 		};
-		D5F97A432823186200005762 /* Extensions */ = {
+		D5F97A432823186200005762 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
 				D5F97A442823188000005762 /* ViewController+Layout.swift */,
 				D5F97A462823188700005762 /* View+Layout.swift */,
 				D5F97A5A28231CC500005762 /* Color+AppColors.swift */,
 			);
-			path = Extensions;
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		D5F97A482823190B00005762 /* Base */ = {
@@ -179,6 +182,14 @@
 				D5F97A5328231A9A00005762 /* StorageKey.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		D5F97A5C28231DC900005762 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D5F97A5D28231DE100005762 /* User.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,6 +277,7 @@
 				D5F97A4E282319B200005762 /* BaseNavigationController.swift in Sources */,
 				D5F97A4C2823191E00005762 /* PresentationProtocol.swift in Sources */,
 				D5F97A422823185400005762 /* UserPickerRouter.swift in Sources */,
+				D5F97A5E28231DE100005762 /* User.swift in Sources */,
 				D5F97A472823188700005762 /* View+Layout.swift in Sources */,
 				D5F97A5228231A4600005762 /* GeneralPreferences.swift in Sources */,
 				D5F97A5B28231CC500005762 /* Color+AppColors.swift in Sources */,
