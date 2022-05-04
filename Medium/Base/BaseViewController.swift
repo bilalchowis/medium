@@ -18,7 +18,7 @@ class BaseViewController: UIViewController {
         super.viewDidLoad()
         
         overrideUserInterfaceStyle = GeneralPreferences.shared.userInterfaceStyle
-        view.backgroundColor = .white
+        view.backgroundColor = .primaryBackground
     }
     
     func set(navigationBackButtonTitle title: String) {
