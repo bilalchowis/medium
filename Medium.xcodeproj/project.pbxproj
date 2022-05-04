@@ -28,6 +28,16 @@
 		D5F97A5928231CAF00005762 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5F97A5828231CAF00005762 /* Colors.xcassets */; };
 		D5F97A5B28231CC500005762 /* Color+AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F97A5A28231CC500005762 /* Color+AppColors.swift */; };
 		D5F97A5E28231DE100005762 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F97A5D28231DE100005762 /* User.swift */; };
+		D5F97A6228231E9500005762 /* CreatePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F97A6128231E9500005762 /* CreatePostViewController.swift */; };
+		D5F97A6428231E9F00005762 /* CreatePostViewController+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F97A6328231E9F00005762 /* CreatePostViewController+Layout.swift */; };
+		D5F97A6628231EA500005762 /* CreatePostInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F97A6528231EA500005762 /* CreatePostInteractor.swift */; };
+		D5F97A6828231EA900005762 /* CreatePostRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F97A6728231EA900005762 /* CreatePostRouter.swift */; };
+		D5F97A6A28231EB100005762 /* CreatePostPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F97A6928231EB100005762 /* CreatePostPresenter.swift */; };
+		D5F97A6C28231EC100005762 /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F97A6B28231EC100005762 /* PostsViewController.swift */; };
+		D5F97A6E28231ECA00005762 /* PostsViewController+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F97A6D28231ECA00005762 /* PostsViewController+Layout.swift */; };
+		D5F97A7028231ED100005762 /* PostsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F97A6F28231ED100005762 /* PostsInteractor.swift */; };
+		D5F97A7228231ED800005762 /* PostsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F97A7128231ED800005762 /* PostsPresenter.swift */; };
+		D5F97A7428231EE000005762 /* PostsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F97A7328231EDF00005762 /* PostsRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +64,16 @@
 		D5F97A5828231CAF00005762 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		D5F97A5A28231CC500005762 /* Color+AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+AppColors.swift"; sourceTree = "<group>"; };
 		D5F97A5D28231DE100005762 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D5F97A6128231E9500005762 /* CreatePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostViewController.swift; sourceTree = "<group>"; };
+		D5F97A6328231E9F00005762 /* CreatePostViewController+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CreatePostViewController+Layout.swift"; sourceTree = "<group>"; };
+		D5F97A6528231EA500005762 /* CreatePostInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostInteractor.swift; sourceTree = "<group>"; };
+		D5F97A6728231EA900005762 /* CreatePostRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostRouter.swift; sourceTree = "<group>"; };
+		D5F97A6928231EB100005762 /* CreatePostPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostPresenter.swift; sourceTree = "<group>"; };
+		D5F97A6B28231EC100005762 /* PostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
+		D5F97A6D28231ECA00005762 /* PostsViewController+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PostsViewController+Layout.swift"; sourceTree = "<group>"; };
+		D5F97A6F28231ED100005762 /* PostsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsInteractor.swift; sourceTree = "<group>"; };
+		D5F97A7128231ED800005762 /* PostsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsPresenter.swift; sourceTree = "<group>"; };
+		D5F97A7328231EDF00005762 /* PostsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +133,8 @@
 				D5F97A332823178300005762 /* Main */,
 				D5F97A36282317E500005762 /* Launch */,
 				D5F97A372823181C00005762 /* UserPicker */,
+				D5F97A6028231E8300005762 /* CreatePost */,
+				D5F97A5F28231E7600005762 /* Posts */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -139,8 +161,8 @@
 			children = (
 				D5F97A392823183B00005762 /* UserPickerViewController.swift */,
 				D5F97A3B2823184500005762 /* UserPickerViewController+Layout.swift */,
-				D5F97A3D2823184900005762 /* UserPickerPresenter.swift */,
 				D5F97A3F2823184D00005762 /* UserPickerInteractor.swift */,
+				D5F97A3D2823184900005762 /* UserPickerPresenter.swift */,
 				D5F97A412823185400005762 /* UserPickerRouter.swift */,
 			);
 			path = UserPicker;
@@ -190,6 +212,30 @@
 				D5F97A5D28231DE100005762 /* User.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		D5F97A5F28231E7600005762 /* Posts */ = {
+			isa = PBXGroup;
+			children = (
+				D5F97A6B28231EC100005762 /* PostsViewController.swift */,
+				D5F97A6D28231ECA00005762 /* PostsViewController+Layout.swift */,
+				D5F97A6F28231ED100005762 /* PostsInteractor.swift */,
+				D5F97A7128231ED800005762 /* PostsPresenter.swift */,
+				D5F97A7328231EDF00005762 /* PostsRouter.swift */,
+			);
+			path = Posts;
+			sourceTree = "<group>";
+		};
+		D5F97A6028231E8300005762 /* CreatePost */ = {
+			isa = PBXGroup;
+			children = (
+				D5F97A6128231E9500005762 /* CreatePostViewController.swift */,
+				D5F97A6328231E9F00005762 /* CreatePostViewController+Layout.swift */,
+				D5F97A6528231EA500005762 /* CreatePostInteractor.swift */,
+				D5F97A6928231EB100005762 /* CreatePostPresenter.swift */,
+				D5F97A6728231EA900005762 /* CreatePostRouter.swift */,
+			);
+			path = CreatePost;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,22 +311,32 @@
 			files = (
 				D5F97A50282319CC00005762 /* BaseViewController.swift in Sources */,
 				D5F97A5428231A9A00005762 /* StorageKey.swift in Sources */,
+				D5F97A6A28231EB100005762 /* CreatePostPresenter.swift in Sources */,
 				D5F97A402823184D00005762 /* UserPickerInteractor.swift in Sources */,
 				D5F97A4A2823191400005762 /* BaseWireframe.swift in Sources */,
 				D5F97A3A2823183B00005762 /* UserPickerViewController.swift in Sources */,
 				D5F97A3C2823184500005762 /* UserPickerViewController+Layout.swift in Sources */,
+				D5F97A7228231ED800005762 /* PostsPresenter.swift in Sources */,
 				D5F97A5728231B3500005762 /* SceneManager.swift in Sources */,
 				D5F97A3E2823184900005762 /* UserPickerPresenter.swift in Sources */,
 				D5F97A20282316E200005762 /* AppDelegate.swift in Sources */,
 				D5F97A22282316E200005762 /* SceneDelegate.swift in Sources */,
 				D5F97A452823188000005762 /* ViewController+Layout.swift in Sources */,
+				D5F97A6E28231ECA00005762 /* PostsViewController+Layout.swift in Sources */,
+				D5F97A6C28231EC100005762 /* PostsViewController.swift in Sources */,
+				D5F97A7028231ED100005762 /* PostsInteractor.swift in Sources */,
+				D5F97A6228231E9500005762 /* CreatePostViewController.swift in Sources */,
 				D5F97A4E282319B200005762 /* BaseNavigationController.swift in Sources */,
+				D5F97A7428231EE000005762 /* PostsRouter.swift in Sources */,
 				D5F97A4C2823191E00005762 /* PresentationProtocol.swift in Sources */,
+				D5F97A6428231E9F00005762 /* CreatePostViewController+Layout.swift in Sources */,
 				D5F97A422823185400005762 /* UserPickerRouter.swift in Sources */,
 				D5F97A5E28231DE100005762 /* User.swift in Sources */,
 				D5F97A472823188700005762 /* View+Layout.swift in Sources */,
 				D5F97A5228231A4600005762 /* GeneralPreferences.swift in Sources */,
 				D5F97A5B28231CC500005762 /* Color+AppColors.swift in Sources */,
+				D5F97A6828231EA900005762 /* CreatePostRouter.swift in Sources */,
+				D5F97A6628231EA500005762 /* CreatePostInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
