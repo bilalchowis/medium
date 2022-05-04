@@ -9,19 +9,27 @@
 /* Begin PBXBuildFile section */
 		D5F97A20282316E200005762 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F97A1F282316E200005762 /* AppDelegate.swift */; };
 		D5F97A22282316E200005762 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F97A21282316E200005762 /* SceneDelegate.swift */; };
-		D5F97A24282316E200005762 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F97A23282316E200005762 /* ViewController.swift */; };
 		D5F97A29282316E500005762 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5F97A28282316E500005762 /* Assets.xcassets */; };
 		D5F97A2C282316E500005762 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5F97A2A282316E500005762 /* LaunchScreen.storyboard */; };
+		D5F97A3A2823183B00005762 /* UserPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F97A392823183B00005762 /* UserPickerViewController.swift */; };
+		D5F97A3C2823184500005762 /* UserPickerViewController+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F97A3B2823184500005762 /* UserPickerViewController+Layout.swift */; };
+		D5F97A3E2823184900005762 /* UserPickerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F97A3D2823184900005762 /* UserPickerPresenter.swift */; };
+		D5F97A402823184D00005762 /* UserPickerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F97A3F2823184D00005762 /* UserPickerInteractor.swift */; };
+		D5F97A422823185400005762 /* UserPickerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F97A412823185400005762 /* UserPickerRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D5F97A1C282316E200005762 /* Medium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Medium.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5F97A1F282316E200005762 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5F97A21282316E200005762 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D5F97A23282316E200005762 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D5F97A28282316E500005762 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D5F97A2B282316E500005762 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D5F97A2D282316E500005762 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5F97A392823183B00005762 /* UserPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPickerViewController.swift; sourceTree = "<group>"; };
+		D5F97A3B2823184500005762 /* UserPickerViewController+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserPickerViewController+Layout.swift"; sourceTree = "<group>"; };
+		D5F97A3D2823184900005762 /* UserPickerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPickerPresenter.swift; sourceTree = "<group>"; };
+		D5F97A3F2823184D00005762 /* UserPickerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPickerInteractor.swift; sourceTree = "<group>"; };
+		D5F97A412823185400005762 /* UserPickerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPickerRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +62,9 @@
 		D5F97A1E282316E200005762 /* Medium */ = {
 			isa = PBXGroup;
 			children = (
+				D5F97A382823182A00005762 /* Managers */,
 				D5F97A34282317D000005762 /* Modules */,
+				D5F97A432823186200005762 /* Extensions */,
 				D5F97A35282317DE00005762 /* Resources */,
 				D5F97A2D282316E500005762 /* Info.plist */,
 			);
@@ -75,7 +85,7 @@
 			children = (
 				D5F97A332823178300005762 /* Main */,
 				D5F97A36282317E500005762 /* Launch */,
-				D5F97A23282316E200005762 /* ViewController.swift */,
+				D5F97A372823181C00005762 /* UserPicker */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -94,6 +104,32 @@
 				D5F97A2A282316E500005762 /* LaunchScreen.storyboard */,
 			);
 			path = Launch;
+			sourceTree = "<group>";
+		};
+		D5F97A372823181C00005762 /* UserPicker */ = {
+			isa = PBXGroup;
+			children = (
+				D5F97A392823183B00005762 /* UserPickerViewController.swift */,
+				D5F97A3B2823184500005762 /* UserPickerViewController+Layout.swift */,
+				D5F97A3D2823184900005762 /* UserPickerPresenter.swift */,
+				D5F97A3F2823184D00005762 /* UserPickerInteractor.swift */,
+				D5F97A412823185400005762 /* UserPickerRouter.swift */,
+			);
+			path = UserPicker;
+			sourceTree = "<group>";
+		};
+		D5F97A382823182A00005762 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		D5F97A432823186200005762 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,9 +202,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5F97A24282316E200005762 /* ViewController.swift in Sources */,
+				D5F97A402823184D00005762 /* UserPickerInteractor.swift in Sources */,
+				D5F97A3A2823183B00005762 /* UserPickerViewController.swift in Sources */,
+				D5F97A3C2823184500005762 /* UserPickerViewController+Layout.swift in Sources */,
+				D5F97A3E2823184900005762 /* UserPickerPresenter.swift in Sources */,
 				D5F97A20282316E200005762 /* AppDelegate.swift in Sources */,
 				D5F97A22282316E200005762 /* SceneDelegate.swift in Sources */,
+				D5F97A422823185400005762 /* UserPickerRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
