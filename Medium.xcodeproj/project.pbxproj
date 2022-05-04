@@ -24,6 +24,7 @@
 		D5F97A50282319CC00005762 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F97A4F282319CC00005762 /* BaseViewController.swift */; };
 		D5F97A5228231A4600005762 /* GeneralPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F97A5128231A4600005762 /* GeneralPreferences.swift */; };
 		D5F97A5428231A9A00005762 /* StorageKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F97A5328231A9A00005762 /* StorageKey.swift */; };
+		D5F97A5728231B3500005762 /* SceneManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F97A5628231B3500005762 /* SceneManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		D5F97A4F282319CC00005762 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		D5F97A5128231A4600005762 /* GeneralPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralPreferences.swift; sourceTree = "<group>"; };
 		D5F97A5328231A9A00005762 /* StorageKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageKey.swift; sourceTree = "<group>"; };
+		D5F97A5628231B3500005762 /* SceneManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				D5F97A5128231A4600005762 /* GeneralPreferences.swift */,
+				D5F97A5628231B3500005762 /* SceneManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 				D5F97A4A2823191400005762 /* BaseWireframe.swift in Sources */,
 				D5F97A3A2823183B00005762 /* UserPickerViewController.swift in Sources */,
 				D5F97A3C2823184500005762 /* UserPickerViewController+Layout.swift in Sources */,
+				D5F97A5728231B3500005762 /* SceneManager.swift in Sources */,
 				D5F97A3E2823184900005762 /* UserPickerPresenter.swift in Sources */,
 				D5F97A20282316E200005762 /* AppDelegate.swift in Sources */,
 				D5F97A22282316E200005762 /* SceneDelegate.swift in Sources */,

@@ -14,7 +14,7 @@ final class GeneralPreferences {
     private init() {
         defaults = UserDefaults.standard
         defaults.register(defaults: [
-            StorageKey.userInterfaceStyle.value: UIScreen.main.traitCollection.userInterfaceStyle.rawValue,
+            StorageKey.userInterfaceStyle.value: UIUserInterfaceStyle.dark.rawValue,
         ])
     }
     
