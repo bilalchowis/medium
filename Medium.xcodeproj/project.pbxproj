@@ -16,6 +16,8 @@
 		D5F97A3E2823184900005762 /* UserPickerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F97A3D2823184900005762 /* UserPickerPresenter.swift */; };
 		D5F97A402823184D00005762 /* UserPickerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F97A3F2823184D00005762 /* UserPickerInteractor.swift */; };
 		D5F97A422823185400005762 /* UserPickerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F97A412823185400005762 /* UserPickerRouter.swift */; };
+		D5F97A452823188000005762 /* ViewController+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F97A442823188000005762 /* ViewController+Layout.swift */; };
+		D5F97A472823188700005762 /* View+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F97A462823188700005762 /* View+Layout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		D5F97A3D2823184900005762 /* UserPickerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPickerPresenter.swift; sourceTree = "<group>"; };
 		D5F97A3F2823184D00005762 /* UserPickerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPickerInteractor.swift; sourceTree = "<group>"; };
 		D5F97A412823185400005762 /* UserPickerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPickerRouter.swift; sourceTree = "<group>"; };
+		D5F97A442823188000005762 /* ViewController+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Layout.swift"; sourceTree = "<group>"; };
+		D5F97A462823188700005762 /* View+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Layout.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +132,8 @@
 		D5F97A432823186200005762 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				D5F97A442823188000005762 /* ViewController+Layout.swift */,
+				D5F97A462823188700005762 /* View+Layout.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -208,7 +214,9 @@
 				D5F97A3E2823184900005762 /* UserPickerPresenter.swift in Sources */,
 				D5F97A20282316E200005762 /* AppDelegate.swift in Sources */,
 				D5F97A22282316E200005762 /* SceneDelegate.swift in Sources */,
+				D5F97A452823188000005762 /* ViewController+Layout.swift in Sources */,
 				D5F97A422823185400005762 /* UserPickerRouter.swift in Sources */,
+				D5F97A472823188700005762 /* View+Layout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
