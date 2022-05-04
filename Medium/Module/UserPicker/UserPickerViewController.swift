@@ -12,10 +12,23 @@ protocol UserPickerDisplayLogic: AnyObject {
 }
 
 class UserPickerViewController: BaseViewController, UserPickerDisplayLogic {
+    let dwgConst = DrawingConstants()
     var presenter: UserPickerPresentationLogic!
+    
+    private(set) lazy var titleLabel: Label = {
+        let view = Label()
+        view.setFont(.title)
+        view.setTextColor(.primaryLabel)
+        view.setTitle("Medium".uppercased(), kern: 1.3)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        
+        return view
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+                
+        setupSubviews()
         presenter.viewDidLoad()
     }
 }
