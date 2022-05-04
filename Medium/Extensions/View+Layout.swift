@@ -7,7 +7,7 @@
 
 import UIKit.UIView
 
-extension UIView {
+@objc extension UIView {
     func setupSubviews() {
         embedSubviews()
         setSubviewsConstraints()

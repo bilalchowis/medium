@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension UIViewController {
+@objc extension UIViewController {
     func setupSubviews() {
         embedSubviews()
         setSubviewsConstraints()

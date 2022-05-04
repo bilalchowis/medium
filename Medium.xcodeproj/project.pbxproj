@@ -18,6 +18,10 @@
 		D5F97A422823185400005762 /* UserPickerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F97A412823185400005762 /* UserPickerRouter.swift */; };
 		D5F97A452823188000005762 /* ViewController+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F97A442823188000005762 /* ViewController+Layout.swift */; };
 		D5F97A472823188700005762 /* View+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F97A462823188700005762 /* View+Layout.swift */; };
+		D5F97A4A2823191400005762 /* BaseWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F97A492823191400005762 /* BaseWireframe.swift */; };
+		D5F97A4C2823191E00005762 /* PresentationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F97A4B2823191E00005762 /* PresentationProtocol.swift */; };
+		D5F97A4E282319B200005762 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F97A4D282319B200005762 /* BaseNavigationController.swift */; };
+		D5F97A50282319CC00005762 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F97A4F282319CC00005762 /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +38,10 @@
 		D5F97A412823185400005762 /* UserPickerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPickerRouter.swift; sourceTree = "<group>"; };
 		D5F97A442823188000005762 /* ViewController+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Layout.swift"; sourceTree = "<group>"; };
 		D5F97A462823188700005762 /* View+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Layout.swift"; sourceTree = "<group>"; };
+		D5F97A492823191400005762 /* BaseWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWireframe.swift; sourceTree = "<group>"; };
+		D5F97A4B2823191E00005762 /* PresentationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationProtocol.swift; sourceTree = "<group>"; };
+		D5F97A4D282319B200005762 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		D5F97A4F282319CC00005762 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +74,7 @@
 		D5F97A1E282316E200005762 /* Medium */ = {
 			isa = PBXGroup;
 			children = (
+				D5F97A482823190B00005762 /* Base */,
 				D5F97A382823182A00005762 /* Managers */,
 				D5F97A34282317D000005762 /* Modules */,
 				D5F97A432823186200005762 /* Extensions */,
@@ -138,6 +147,17 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		D5F97A482823190B00005762 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				D5F97A492823191400005762 /* BaseWireframe.swift */,
+				D5F97A4B2823191E00005762 /* PresentationProtocol.swift */,
+				D5F97A4D282319B200005762 /* BaseNavigationController.swift */,
+				D5F97A4F282319CC00005762 /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -208,13 +228,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5F97A50282319CC00005762 /* BaseViewController.swift in Sources */,
 				D5F97A402823184D00005762 /* UserPickerInteractor.swift in Sources */,
+				D5F97A4A2823191400005762 /* BaseWireframe.swift in Sources */,
 				D5F97A3A2823183B00005762 /* UserPickerViewController.swift in Sources */,
 				D5F97A3C2823184500005762 /* UserPickerViewController+Layout.swift in Sources */,
 				D5F97A3E2823184900005762 /* UserPickerPresenter.swift in Sources */,
 				D5F97A20282316E200005762 /* AppDelegate.swift in Sources */,
 				D5F97A22282316E200005762 /* SceneDelegate.swift in Sources */,
 				D5F97A452823188000005762 /* ViewController+Layout.swift in Sources */,
+				D5F97A4E282319B200005762 /* BaseNavigationController.swift in Sources */,
+				D5F97A4C2823191E00005762 /* PresentationProtocol.swift in Sources */,
 				D5F97A422823185400005762 /* UserPickerRouter.swift in Sources */,
 				D5F97A472823188700005762 /* View+Layout.swift in Sources */,
 			);

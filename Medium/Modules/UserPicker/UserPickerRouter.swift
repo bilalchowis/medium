@@ -5,4 +5,17 @@
 //  Created by Bilal Bakhrom on 04/05/2022.
 //
 
-import Foundation
+protocol UserPickerRoutingLogic {
+    /* DEFAULT */
+}
+
+class UserPickerRouter: BaseWireframe, UserPickerRoutingLogic {
+    init() {
+        let moduleViewController = UserPickerViewController()
+        super.init(viewController: moduleViewController)
+        
+        let interactor = UserPickerInteractor()
+        let presenter = UserPickerPresenter(view: moduleViewController, interactor: interactor, router: self)
+        moduleViewController.presenter = presenter
+    }
+}
