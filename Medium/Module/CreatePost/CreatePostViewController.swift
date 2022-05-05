@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import PhotosUI
 
 protocol CreatePostDisplayLogic: AnyObject {
     /* DEFAULT */
@@ -43,6 +44,8 @@ class CreatePostViewController: BaseViewController, CreatePostDisplayLogic {
         view.setImage(UIImage(named: "img_add"), for: .normal)
         view.setImage(UIImage(named: "img_add"), for: .highlighted)
         view.imageView?.contentMode = .scaleAspectFill
+        view.addTarget(self, action: #selector(handleImageButtonClick), for: .touchUpInside)
+        view.layer.cornerRadius = 8
         view.translatesAutoresizingMaskIntoConstraints = false
         
         return view
@@ -56,6 +59,25 @@ class CreatePostViewController: BaseViewController, CreatePostDisplayLogic {
         view.translatesAutoresizingMaskIntoConstraints = false
         
         return view
+    }()
+    
+    private(set) lazy var pickerController: UIViewController = {
+        if #available(iOS 14.0, *) {
+            var configuration = PHPickerConfiguration()
+            configuration.filter = .any(of: [.images])
+            
+            let viewController = PHPickerViewController(configuration: configuration)
+            viewController.overrideUserInterfaceStyle = GeneralPreferences.shared.userInterfaceStyle
+            viewController.delegate = self
+            
+            return viewController
+        } else {
+            let viewController = UIImagePickerController()
+            viewController.mediaTypes = ["public.image"]
+            viewController.sourceType = .photoLibrary
+            
+            return viewController
+        }
     }()
     
     override func viewDidLoad() {
@@ -80,13 +102,21 @@ class CreatePostViewController: BaseViewController, CreatePostDisplayLogic {
         submitButton.isEnabled = false
     }
     
+    private func apply(image: UIImage) {
+        DispatchQueue.main.async {
+            self.imageButton.setImage(image, for: .normal)
+            self.imageButton.setImage(image, for: .highlighted)
+            self.presenter.willSet(image: image)
+        }
+    }
+    
     // MARK: - Action
     @objc private func handleTapGesture() {
         view.endEditing(true)
     }
     
     @objc private func handleImageButtonClick() {
-        
+        present(pickerController, animated: true, completion: nil)
     }
     
     @objc private func handleSubmitButtonClick() {
@@ -118,5 +148,32 @@ extension CreatePostViewController: UITextViewDelegate {
         
         presenter.willSet(post: text)
         text.isEmpty ? disableSubmitButton() : enableSubmitButton()
+    }
+}
+
+@available(iOS 14.0, *)
+extension CreatePostViewController: PHPickerViewControllerDelegate {
+    func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
+        // Dimiss picker.
+        picker.dismiss(animated: true, completion: nil)
+        // Get ItemProvider.
+        guard let pickerResult = results.first else { return }
+        // Load image.
+        pickerResult.itemProvider.loadObject(ofClass: UIImage.self) { [weak self] image, error in
+            guard let self = self else { return }
+            guard let image = (image as? UIImage) else { return }
+            self.apply(image: image)
+        }
+    }
+}
+
+extension CreatePostViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        // Close picker.
+        dismiss(animated: true, completion: nil)
+        // Get picked image.
+        guard let image = info[.originalImage] as? UIImage else { return }
+        // Save image.
+        self.apply(image: image)
     }
 }
