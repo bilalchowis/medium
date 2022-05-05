@@ -12,7 +12,7 @@ protocol PostsBusinessLogic {
     var user: User { get }
     
     func fetchPosts(completion: @escaping ([PostTableCellViewModel]) -> Void)
-    func bind(completion: @escaping () -> Void)
+    func bind(completion: @escaping ([PostTableCellViewModel]) -> Void)
 }
 
 class PostsInteractor: PostsBusinessLogic {
@@ -32,11 +32,11 @@ class PostsInteractor: PostsBusinessLogic {
         }
     }
     
-    func bind(completion: @escaping () -> Void) {
+    func bind(completion: @escaping ([PostTableCellViewModel]) -> Void) {
         NotificationCenter.default
             .publisher(name: .newPostAdded)
-            .sink { _ in
-                completion()
+            .sink { [unowned self] _ in
+                self.fetchPosts(completion: completion)
             }
             .store(in: &subscriptions)
     }

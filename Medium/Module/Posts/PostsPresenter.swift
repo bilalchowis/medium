@@ -25,6 +25,10 @@ class PostsPresenter: PostsPresentationLogic {
     func viewDidLoad() {
         view.startLoader()
         willFetch()
+        
+        interactor.bind { [weak self] items in
+            self?.view.addPost(items)
+        }
     }
     
     func willFetch() {

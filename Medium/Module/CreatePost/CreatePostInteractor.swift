@@ -17,7 +17,8 @@ class CreatePostInteractor: CreatePostBusinessLogic {
     let user: User
     private var postText: String = ""
     private var image: UIImage?
-    private var imagePath: String?
+    private var imageName: String?
+    private let imageFactory = ImageFactory(directory: .post)
     
     init(user: User) {
         self.user = user
@@ -33,17 +34,31 @@ class CreatePostInteractor: CreatePostBusinessLogic {
     
     func submit() {
         saveImage()
-        Server().addPost(post: Post(id: UUID().uuidString,
-                                    user: user,
-                                    post: postText,
-                                    postImage: imagePath)
-        )
-        
+        addPost(post: generatePost())
+        publishPost()
+    }
+    
+    private func addPost(post: Post) {
+        Server().addPost(post: post)
+    }
+    
+    private func publishPost() {
         NotificationCenter.default
             .post(name: .newPostAdded, object: nil)
     }
     
-    func saveImage() {
+    private func generatePost() -> Post {
+        Post(id: UUID().uuidString,
+             user: user,
+             post: postText,
+             postImage: imageName)
+    }
+    
+    private func saveImage() {
+        guard let image = image else { return }
         
+        let imageName = imageFactory.generateImageName()
+        try? imageFactory.save(image: image, withName: imageName)
+        self.imageName = imageName
     }
 }

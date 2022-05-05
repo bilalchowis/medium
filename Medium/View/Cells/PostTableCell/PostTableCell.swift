@@ -91,8 +91,9 @@ class PostTableCell: BaseTableViewCell {
         usernameLabel.text = viewModel.username
         postLabel.text = viewModel.text
         
-        if let imagePath = viewModel.postImage {
-            postImageView.image = UIImage(named: imagePath)
+        if let imagePath = viewModel.postImage,
+            let image = ImageFactory(directory: .post).image(named: imagePath) {
+            postImageView.image = image
             postImageView.isHidden = false
         } else {
             postImageView.image = nil

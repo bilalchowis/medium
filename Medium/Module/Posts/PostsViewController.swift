@@ -10,6 +10,7 @@ import UIKit
 protocol PostsDisplayLogic: AnyObject {
     func startLoader()
     func stopLoader()
+    func addPost(_ items: [PostTableCellViewModel])
     func updateUI(with items: [PostTableCellViewModel])
 }
 
@@ -55,6 +56,16 @@ class PostsViewController: BaseViewController, PostsDisplayLogic {
     
     func stopLoader() {
         loader.stopAnimating()
+    }
+    
+    func addPost(_ items: [PostTableCellViewModel]) {
+        self.items = items
+        
+        DispatchQueue.main.async {
+            self.tableView.beginUpdates()
+            self.tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .none)
+            self.tableView.endUpdates()
+        }
     }
     
     func updateUI(with items: [PostTableCellViewModel]) {

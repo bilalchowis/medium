@@ -9,6 +9,14 @@
 /* Begin PBXBuildFile section */
 		D5C2569328246BE7002D43A1 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C2569228246BE7002D43A1 /* TextView.swift */; };
 		D5C2569528247516002D43A1 /* PostNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C2569428247516002D43A1 /* PostNotification.swift */; };
+		D5C2569828247810002D43A1 /* ImageFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C2569728247810002D43A1 /* ImageFactory.swift */; };
+		D5C2569A28247829002D43A1 /* ImageFactoryDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C2569928247829002D43A1 /* ImageFactoryDirectory.swift */; };
+		D5C2569C28247849002D43A1 /* FolderManager+DocURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C2569B28247849002D43A1 /* FolderManager+DocURL.swift */; };
+		D5C2569E282478B6002D43A1 /* FolderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C2569D282478B6002D43A1 /* FolderManager.swift */; };
+		D5C256A0282479F1002D43A1 /* PostManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C2569F282479F1002D43A1 /* PostManager.swift */; };
+		D5C256A228247A3B002D43A1 /* SingleSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C256A128247A3B002D43A1 /* SingleSourceProtocol.swift */; };
+		D5C256A428247A5B002D43A1 /* PostManager+Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C256A328247A5B002D43A1 /* PostManager+Keys.swift */; };
+		D5C256A628247AA2002D43A1 /* URL+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C256A528247AA2002D43A1 /* URL+JSON.swift */; };
 		D5F97A20282316E200005762 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F97A1F282316E200005762 /* AppDelegate.swift */; };
 		D5F97A22282316E200005762 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F97A21282316E200005762 /* SceneDelegate.swift */; };
 		D5F97A29282316E500005762 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5F97A28282316E500005762 /* Assets.xcassets */; };
@@ -72,6 +80,14 @@
 /* Begin PBXFileReference section */
 		D5C2569228246BE7002D43A1 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		D5C2569428247516002D43A1 /* PostNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostNotification.swift; sourceTree = "<group>"; };
+		D5C2569728247810002D43A1 /* ImageFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFactory.swift; sourceTree = "<group>"; };
+		D5C2569928247829002D43A1 /* ImageFactoryDirectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFactoryDirectory.swift; sourceTree = "<group>"; };
+		D5C2569B28247849002D43A1 /* FolderManager+DocURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FolderManager+DocURL.swift"; sourceTree = "<group>"; };
+		D5C2569D282478B6002D43A1 /* FolderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderManager.swift; sourceTree = "<group>"; };
+		D5C2569F282479F1002D43A1 /* PostManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostManager.swift; sourceTree = "<group>"; };
+		D5C256A128247A3B002D43A1 /* SingleSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleSourceProtocol.swift; sourceTree = "<group>"; };
+		D5C256A328247A5B002D43A1 /* PostManager+Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PostManager+Keys.swift"; sourceTree = "<group>"; };
+		D5C256A528247AA2002D43A1 /* URL+JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+JSON.swift"; sourceTree = "<group>"; };
 		D5F97A1C282316E200005762 /* Medium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Medium.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5F97A1F282316E200005762 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5F97A21282316E200005762 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -145,6 +161,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D5C2569628247806002D43A1 /* ImageFactory */ = {
+			isa = PBXGroup;
+			children = (
+				D5C2569728247810002D43A1 /* ImageFactory.swift */,
+				D5C2569928247829002D43A1 /* ImageFactoryDirectory.swift */,
+			);
+			path = ImageFactory;
+			sourceTree = "<group>";
+		};
 		D5F97A13282316E200005762 = {
 			isa = PBXGroup;
 			children = (
@@ -232,8 +257,10 @@
 		D5F97A382823182A00005762 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				D5C2569628247806002D43A1 /* ImageFactory */,
 				D5F97A5128231A4600005762 /* GeneralPreferences.swift */,
 				D5F97A5628231B3500005762 /* SceneManager.swift */,
+				D5C2569D282478B6002D43A1 /* FolderManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -247,6 +274,8 @@
 				D5F97A5A28231CC500005762 /* Color+AppColors.swift */,
 				D5F97A8C2823206500005762 /* Font+LatoFont.swift */,
 				D5F97A9D2823452900005762 /* List+CellControl.swift */,
+				D5C2569B28247849002D43A1 /* FolderManager+DocURL.swift */,
+				D5C256A528247AA2002D43A1 /* URL+JSON.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -268,6 +297,7 @@
 			isa = PBXGroup;
 			children = (
 				D5F97A5328231A9A00005762 /* StorageKey.swift */,
+				D5C256A128247A3B002D43A1 /* SingleSourceProtocol.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -377,6 +407,8 @@
 			isa = PBXGroup;
 			children = (
 				D5F97AB02823D1FB00005762 /* Server.swift */,
+				D5C2569F282479F1002D43A1 /* PostManager.swift */,
+				D5C256A328247A5B002D43A1 /* PostManager+Keys.swift */,
 			);
 			path = External;
 			sourceTree = "<group>";
@@ -468,15 +500,19 @@
 				D5F97A8D2823206500005762 /* Font+LatoFont.swift in Sources */,
 				D5F97A402823184D00005762 /* UserPickerInteractor.swift in Sources */,
 				D5F97AA02823609F00005762 /* Button.swift in Sources */,
+				D5C2569C28247849002D43A1 /* FolderManager+DocURL.swift in Sources */,
 				D5F97A4A2823191400005762 /* BaseWireframe.swift in Sources */,
 				D5F97A3A2823183B00005762 /* UserPickerViewController.swift in Sources */,
 				D5F97AAC2823CD3900005762 /* BaseTableViewCell.swift in Sources */,
+				D5C256A228247A3B002D43A1 /* SingleSourceProtocol.swift in Sources */,
+				D5C256A628247AA2002D43A1 /* URL+JSON.swift in Sources */,
 				D5C2569528247516002D43A1 /* PostNotification.swift in Sources */,
 				D5F97A3C2823184500005762 /* UserPickerViewController+Layout.swift in Sources */,
 				D5F97AA82823CD2700005762 /* PostTableCell+Layout.swift in Sources */,
 				D5F97AA2282365D200005762 /* View+DropShadow.swift in Sources */,
 				D5F97A94282343F400005762 /* CenteredCollectionViewFlowLayout.swift in Sources */,
 				D5F97A7228231ED800005762 /* PostsPresenter.swift in Sources */,
+				D5C256A428247A5B002D43A1 /* PostManager+Keys.swift in Sources */,
 				D5F97A5728231B3500005762 /* SceneManager.swift in Sources */,
 				D5F97A3E2823184900005762 /* UserPickerPresenter.swift in Sources */,
 				D5F97A20282316E200005762 /* AppDelegate.swift in Sources */,
@@ -486,6 +522,7 @@
 				D5F97A452823188000005762 /* ViewController+Layout.swift in Sources */,
 				D5F97A982823443E00005762 /* UserCollectionCell+Layout.swift in Sources */,
 				D5F97AA62823CD2000005762 /* PostTableCell.swift in Sources */,
+				D5C2569828247810002D43A1 /* ImageFactory.swift in Sources */,
 				D5F97AAE2823D1B100005762 /* Post.swift in Sources */,
 				D5F97A6E28231ECA00005762 /* PostsViewController+Layout.swift in Sources */,
 				D5F97AB12823D1FB00005762 /* Server.swift in Sources */,
@@ -493,14 +530,17 @@
 				D5F97A962823443900005762 /* UserCollectionCell.swift in Sources */,
 				D5F97AAA2823CD2E00005762 /* PostTableCellViewModel.swift in Sources */,
 				D5F97A922823210500005762 /* Label.swift in Sources */,
+				D5C256A0282479F1002D43A1 /* PostManager.swift in Sources */,
 				D5F97A9E2823452900005762 /* List+CellControl.swift in Sources */,
 				D5F97A7028231ED100005762 /* PostsInteractor.swift in Sources */,
 				D5F97A6228231E9500005762 /* CreatePostViewController.swift in Sources */,
 				D5F97A4E282319B200005762 /* BaseNavigationController.swift in Sources */,
 				D5F97A7428231EE000005762 /* PostsRouter.swift in Sources */,
+				D5C2569A28247829002D43A1 /* ImageFactoryDirectory.swift in Sources */,
 				D5F97A4C2823191E00005762 /* PresentationProtocol.swift in Sources */,
 				D5F97A6428231E9F00005762 /* CreatePostViewController+Layout.swift in Sources */,
 				D5F97A422823185400005762 /* UserPickerRouter.swift in Sources */,
+				D5C2569E282478B6002D43A1 /* FolderManager.swift in Sources */,
 				D5F97A9C2823448900005762 /* BaseCollectionViewCell.swift in Sources */,
 				D5F97A5E28231DE100005762 /* User.swift in Sources */,
 				D5F97A472823188700005762 /* View+Layout.swift in Sources */,
