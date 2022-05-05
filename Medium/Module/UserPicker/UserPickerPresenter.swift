@@ -8,7 +8,7 @@
 import UIKit
 
 protocol UserPickerPresentationLogic: PresentationProtocol {
-    /* DEFAULT */
+    func willOpenPosts(_ user: User)
 }
 
 class UserPickerPresenter: UserPickerPresentationLogic {
@@ -23,6 +23,12 @@ class UserPickerPresenter: UserPickerPresentationLogic {
     }
     
     func viewDidLoad() {
-        
+        interactor.fetchUsers { [weak self] items in
+            self?.view.updateUI(with: items)
+        }
+    }
+    
+    func willOpenPosts(_ user: User) {
+        router.openPosts(user)
     }
 }

@@ -6,7 +6,7 @@
 //
 
 protocol UserPickerRoutingLogic {
-    /* DEFAULT */
+    func openPosts(_ user: User)
 }
 
 class UserPickerRouter: BaseWireframe, UserPickerRoutingLogic {
@@ -17,5 +17,10 @@ class UserPickerRouter: BaseWireframe, UserPickerRoutingLogic {
         let interactor = UserPickerInteractor()
         let presenter = UserPickerPresenter(view: moduleViewController, interactor: interactor, router: self)
         moduleViewController.presenter = presenter
+    }
+    
+    func openPosts(_ user: User) {
+        let router = PostsRouter(user: user)
+        navigationController?.pushWireframe(router)
     }
 }

@@ -51,6 +51,14 @@
 		D5F97A8D2823206500005762 /* Font+LatoFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F97A8C2823206500005762 /* Font+LatoFont.swift */; };
 		D5F97A8F282320AB00005762 /* LatoFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F97A8E282320AB00005762 /* LatoFont.swift */; };
 		D5F97A922823210500005762 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F97A912823210500005762 /* Label.swift */; };
+		D5F97A94282343F400005762 /* CenteredCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F97A93282343F400005762 /* CenteredCollectionViewFlowLayout.swift */; };
+		D5F97A962823443900005762 /* UserCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F97A952823443900005762 /* UserCollectionCell.swift */; };
+		D5F97A982823443E00005762 /* UserCollectionCell+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F97A972823443E00005762 /* UserCollectionCell+Layout.swift */; };
+		D5F97A9A2823444400005762 /* UserCollectionCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F97A992823444400005762 /* UserCollectionCellViewModel.swift */; };
+		D5F97A9C2823448900005762 /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F97A9B2823448900005762 /* BaseCollectionViewCell.swift */; };
+		D5F97A9E2823452900005762 /* List+CellControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F97A9D2823452900005762 /* List+CellControl.swift */; };
+		D5F97AA02823609F00005762 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F97A9F2823609F00005762 /* Button.swift */; };
+		D5F97AA2282365D200005762 /* View+DropShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F97AA1282365D200005762 /* View+DropShadow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,6 +108,14 @@
 		D5F97A8C2823206500005762 /* Font+LatoFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+LatoFont.swift"; sourceTree = "<group>"; };
 		D5F97A8E282320AB00005762 /* LatoFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatoFont.swift; sourceTree = "<group>"; };
 		D5F97A912823210500005762 /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
+		D5F97A93282343F400005762 /* CenteredCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenteredCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		D5F97A952823443900005762 /* UserCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCollectionCell.swift; sourceTree = "<group>"; };
+		D5F97A972823443E00005762 /* UserCollectionCell+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserCollectionCell+Layout.swift"; sourceTree = "<group>"; };
+		D5F97A992823444400005762 /* UserCollectionCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCollectionCellViewModel.swift; sourceTree = "<group>"; };
+		D5F97A9B2823448900005762 /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
+		D5F97A9D2823452900005762 /* List+CellControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "List+CellControl.swift"; sourceTree = "<group>"; };
+		D5F97A9F2823609F00005762 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		D5F97AA1282365D200005762 /* View+DropShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+DropShadow.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,8 +226,10 @@
 			children = (
 				D5F97A442823188000005762 /* ViewController+Layout.swift */,
 				D5F97A462823188700005762 /* View+Layout.swift */,
+				D5F97AA1282365D200005762 /* View+DropShadow.swift */,
 				D5F97A5A28231CC500005762 /* Color+AppColors.swift */,
 				D5F97A8C2823206500005762 /* Font+LatoFont.swift */,
+				D5F97A9D2823452900005762 /* List+CellControl.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -223,6 +241,7 @@
 				D5F97A4B2823191E00005762 /* PresentationProtocol.swift */,
 				D5F97A4D282319B200005762 /* BaseNavigationController.swift */,
 				D5F97A4F282319CC00005762 /* BaseViewController.swift */,
+				D5F97A9B2823448900005762 /* BaseCollectionViewCell.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -273,6 +292,7 @@
 			children = (
 				D5F97A90282320FD00005762 /* Components */,
 				D5F97A7628231F8400005762 /* Cells */,
+				D5F97A93282343F400005762 /* CenteredCollectionViewFlowLayout.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -280,6 +300,9 @@
 		D5F97A7628231F8400005762 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				D5F97A952823443900005762 /* UserCollectionCell.swift */,
+				D5F97A972823443E00005762 /* UserCollectionCell+Layout.swift */,
+				D5F97A992823444400005762 /* UserCollectionCellViewModel.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -305,6 +328,7 @@
 			isa = PBXGroup;
 			children = (
 				D5F97A912823210500005762 /* Label.swift */,
+				D5F97A9F2823609F00005762 /* Button.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -395,19 +419,26 @@
 				D5F97A6A28231EB100005762 /* CreatePostPresenter.swift in Sources */,
 				D5F97A8D2823206500005762 /* Font+LatoFont.swift in Sources */,
 				D5F97A402823184D00005762 /* UserPickerInteractor.swift in Sources */,
+				D5F97AA02823609F00005762 /* Button.swift in Sources */,
 				D5F97A4A2823191400005762 /* BaseWireframe.swift in Sources */,
 				D5F97A3A2823183B00005762 /* UserPickerViewController.swift in Sources */,
 				D5F97A3C2823184500005762 /* UserPickerViewController+Layout.swift in Sources */,
+				D5F97AA2282365D200005762 /* View+DropShadow.swift in Sources */,
+				D5F97A94282343F400005762 /* CenteredCollectionViewFlowLayout.swift in Sources */,
 				D5F97A7228231ED800005762 /* PostsPresenter.swift in Sources */,
 				D5F97A5728231B3500005762 /* SceneManager.swift in Sources */,
 				D5F97A3E2823184900005762 /* UserPickerPresenter.swift in Sources */,
 				D5F97A20282316E200005762 /* AppDelegate.swift in Sources */,
 				D5F97A8F282320AB00005762 /* LatoFont.swift in Sources */,
+				D5F97A9A2823444400005762 /* UserCollectionCellViewModel.swift in Sources */,
 				D5F97A22282316E200005762 /* SceneDelegate.swift in Sources */,
 				D5F97A452823188000005762 /* ViewController+Layout.swift in Sources */,
+				D5F97A982823443E00005762 /* UserCollectionCell+Layout.swift in Sources */,
 				D5F97A6E28231ECA00005762 /* PostsViewController+Layout.swift in Sources */,
 				D5F97A6C28231EC100005762 /* PostsViewController.swift in Sources */,
+				D5F97A962823443900005762 /* UserCollectionCell.swift in Sources */,
 				D5F97A922823210500005762 /* Label.swift in Sources */,
+				D5F97A9E2823452900005762 /* List+CellControl.swift in Sources */,
 				D5F97A7028231ED100005762 /* PostsInteractor.swift in Sources */,
 				D5F97A6228231E9500005762 /* CreatePostViewController.swift in Sources */,
 				D5F97A4E282319B200005762 /* BaseNavigationController.swift in Sources */,
@@ -415,6 +446,7 @@
 				D5F97A4C2823191E00005762 /* PresentationProtocol.swift in Sources */,
 				D5F97A6428231E9F00005762 /* CreatePostViewController+Layout.swift in Sources */,
 				D5F97A422823185400005762 /* UserPickerRouter.swift in Sources */,
+				D5F97A9C2823448900005762 /* BaseCollectionViewCell.swift in Sources */,
 				D5F97A5E28231DE100005762 /* User.swift in Sources */,
 				D5F97A472823188700005762 /* View+Layout.swift in Sources */,
 				D5F97A5228231A4600005762 /* GeneralPreferences.swift in Sources */,

@@ -31,7 +31,8 @@ final class SceneManager {
     
     /// Updates root view controller of window with wireframe's view controller. Shows the window and makes it the key window.
     func set(rootWireframe: BaseWireframe) {
-        window.rootViewController = rootWireframe.viewController
+        navigationController = makeNavController(rootViewController: rootWireframe.viewController)
+        window.rootViewController = navigationController
         window.makeKeyAndVisible()
     }
     

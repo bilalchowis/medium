@@ -16,6 +16,9 @@ class PostsViewController: BaseViewController, PostsDisplayLogic {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setBackButton(for: navigationItem)
+        setupSubviews()
         presenter.viewDidLoad()
     }
 }
