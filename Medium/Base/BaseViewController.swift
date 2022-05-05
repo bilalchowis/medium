@@ -8,11 +8,7 @@
 import UIKit
 
 class BaseViewController: UIViewController {
-    let isReduceTransparencyEnabled = UIAccessibility.isReduceTransparencyEnabled
-    
-    var isNavBarHidden: Bool {
-        return navigationController?.navigationBar.isHidden ?? true
-    }
+    private(set) var shadows: [String: Bool] = [:]
     
     deinit {
         #if DEBUG
@@ -25,6 +21,11 @@ class BaseViewController: UIViewController {
         
         overrideUserInterfaceStyle = GeneralPreferences.shared.userInterfaceStyle
         view.backgroundColor = .primaryBackground
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        updateShadows()
     }
     
     func setBackButton(for navigationItem: UINavigationItem) {
@@ -47,4 +48,26 @@ class BaseViewController: UIViewController {
         
         navigationItem.titleView = label
     }
+    
+    // MARK: - Shadow
+    func registerDropShadow(_ label: String?) {
+        guard let label = label else { return }
+        shadows[label] = true
+    }
+    
+    func canDropShadow(_ label: String?) -> Bool {
+        guard let label = label else { return false }
+        guard let canDrop = shadows[label] else { return false }
+        
+        return canDrop
+    }
+    
+    func didDropShadow(_ label: String?) {
+        guard let label = label else { return }
+        shadows[label] = false
+    }
+}
+
+@objc extension BaseViewController {
+    func updateShadows() { }
 }
