@@ -8,9 +8,10 @@
 import Foundation
 
 struct User: Codable, Identifiable {
-    var id: String
+    var id: String = UUID().uuidString
     var firstName: String
     var lastName: String
+    var userName: String
     var imagePath: String?
     var postIDs: [String]
 }

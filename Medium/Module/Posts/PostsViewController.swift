@@ -8,11 +8,19 @@
 import UIKit
 
 protocol PostsDisplayLogic: AnyObject {
-    /* DEFAULT */
+    
 }
 
 class PostsViewController: BaseViewController, PostsDisplayLogic {
     var presenter: PostsPresentationLogic!
+    
+    private(set) lazy var tableView: UITableView = {
+        let view = UITableView()
+        view.register(PostTableCell.self)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        
+        return view
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()

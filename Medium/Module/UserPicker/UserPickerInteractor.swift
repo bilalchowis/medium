@@ -14,12 +14,36 @@ protocol UserPickerBusinessLogic {
 class UserPickerInteractor: UserPickerBusinessLogic {
     func fetchUsers(completion: @escaping ([UserCollectionCellViewModel]) -> Void) {
         let users: [User] = [
-            User(id: UUID().uuidString, firstName: "Elon", lastName: "Mask", imagePath: "user-1", postIDs: []),
-            User(id: UUID().uuidString, firstName: "Tom", lastName: "Cook", imagePath: "user-2", postIDs: []),
-            User(id: UUID().uuidString, firstName: "Uncle", lastName: "Bob", imagePath: "user-3", postIDs: []),
-            User(id: UUID().uuidString, firstName: "Angelina", lastName: "Jolie", imagePath: "user-4", postIDs: []),
-            User(id: UUID().uuidString, firstName: "Jennifer", lastName: "Aniston", imagePath: "user-5", postIDs: []),
-            User(id: UUID().uuidString, firstName: "Mark", lastName: "Zuckerberg", imagePath: "user-6", postIDs: [])
+            User(firstName: "Elon",
+                 lastName: "Mask",
+                 userName: "engineer",
+                 imagePath: "user-1",
+                 postIDs: []),
+            User(firstName: "Tom",
+                 lastName: "Cook",
+                 userName: "boss",
+                 imagePath: "user-2",
+                 postIDs: []),
+            User(firstName: "Uncle",
+                 lastName: "Bob",
+                 userName: "procode",
+                 imagePath: "user-3",
+                 postIDs: []),
+            User(firstName: "Angelina",
+                 lastName: "Jolie",
+                 userName: "zirapcha",
+                 imagePath: "user-4",
+                 postIDs: []),
+            User(firstName: "Jennifer",
+                 lastName: "Aniston",
+                 userName: "shaddod",
+                 imagePath: "user-5",
+                 postIDs: []),
+            User(firstName: "Mark",
+                 lastName: "Zuckerberg",
+                 userName: "button",
+                 imagePath: "user-6",
+                 postIDs: [])
         ]
         
         let vmsForUserCell = users.map(UserCollectionCellViewModel.init)

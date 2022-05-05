@@ -59,6 +59,10 @@
 		D5F97A9E2823452900005762 /* List+CellControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F97A9D2823452900005762 /* List+CellControl.swift */; };
 		D5F97AA02823609F00005762 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F97A9F2823609F00005762 /* Button.swift */; };
 		D5F97AA2282365D200005762 /* View+DropShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F97AA1282365D200005762 /* View+DropShadow.swift */; };
+		D5F97AA62823CD2000005762 /* PostTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F97AA52823CD2000005762 /* PostTableCell.swift */; };
+		D5F97AA82823CD2700005762 /* PostTableCell+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F97AA72823CD2700005762 /* PostTableCell+Layout.swift */; };
+		D5F97AAA2823CD2E00005762 /* PostTableCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F97AA92823CD2E00005762 /* PostTableCellViewModel.swift */; };
+		D5F97AAC2823CD3900005762 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F97AAB2823CD3900005762 /* BaseTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -116,6 +120,10 @@
 		D5F97A9D2823452900005762 /* List+CellControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "List+CellControl.swift"; sourceTree = "<group>"; };
 		D5F97A9F2823609F00005762 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		D5F97AA1282365D200005762 /* View+DropShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+DropShadow.swift"; sourceTree = "<group>"; };
+		D5F97AA52823CD2000005762 /* PostTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableCell.swift; sourceTree = "<group>"; };
+		D5F97AA72823CD2700005762 /* PostTableCell+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PostTableCell+Layout.swift"; sourceTree = "<group>"; };
+		D5F97AA92823CD2E00005762 /* PostTableCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableCellViewModel.swift; sourceTree = "<group>"; };
+		D5F97AAB2823CD3900005762 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,6 +250,7 @@
 				D5F97A4D282319B200005762 /* BaseNavigationController.swift */,
 				D5F97A4F282319CC00005762 /* BaseViewController.swift */,
 				D5F97A9B2823448900005762 /* BaseCollectionViewCell.swift */,
+				D5F97AAB2823CD3900005762 /* BaseTableViewCell.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -300,9 +309,8 @@
 		D5F97A7628231F8400005762 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				D5F97A952823443900005762 /* UserCollectionCell.swift */,
-				D5F97A972823443E00005762 /* UserCollectionCell+Layout.swift */,
-				D5F97A992823444400005762 /* UserCollectionCellViewModel.swift */,
+				D5F97AA32823CD0700005762 /* UserCollectionCell */,
+				D5F97AA42823CD1000005762 /* PostTableCell */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -331,6 +339,26 @@
 				D5F97A9F2823609F00005762 /* Button.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		D5F97AA32823CD0700005762 /* UserCollectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				D5F97A952823443900005762 /* UserCollectionCell.swift */,
+				D5F97A972823443E00005762 /* UserCollectionCell+Layout.swift */,
+				D5F97A992823444400005762 /* UserCollectionCellViewModel.swift */,
+			);
+			path = UserCollectionCell;
+			sourceTree = "<group>";
+		};
+		D5F97AA42823CD1000005762 /* PostTableCell */ = {
+			isa = PBXGroup;
+			children = (
+				D5F97AA52823CD2000005762 /* PostTableCell.swift */,
+				D5F97AA72823CD2700005762 /* PostTableCell+Layout.swift */,
+				D5F97AA92823CD2E00005762 /* PostTableCellViewModel.swift */,
+			);
+			path = PostTableCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -422,7 +450,9 @@
 				D5F97AA02823609F00005762 /* Button.swift in Sources */,
 				D5F97A4A2823191400005762 /* BaseWireframe.swift in Sources */,
 				D5F97A3A2823183B00005762 /* UserPickerViewController.swift in Sources */,
+				D5F97AAC2823CD3900005762 /* BaseTableViewCell.swift in Sources */,
 				D5F97A3C2823184500005762 /* UserPickerViewController+Layout.swift in Sources */,
+				D5F97AA82823CD2700005762 /* PostTableCell+Layout.swift in Sources */,
 				D5F97AA2282365D200005762 /* View+DropShadow.swift in Sources */,
 				D5F97A94282343F400005762 /* CenteredCollectionViewFlowLayout.swift in Sources */,
 				D5F97A7228231ED800005762 /* PostsPresenter.swift in Sources */,
@@ -434,9 +464,11 @@
 				D5F97A22282316E200005762 /* SceneDelegate.swift in Sources */,
 				D5F97A452823188000005762 /* ViewController+Layout.swift in Sources */,
 				D5F97A982823443E00005762 /* UserCollectionCell+Layout.swift in Sources */,
+				D5F97AA62823CD2000005762 /* PostTableCell.swift in Sources */,
 				D5F97A6E28231ECA00005762 /* PostsViewController+Layout.swift in Sources */,
 				D5F97A6C28231EC100005762 /* PostsViewController.swift in Sources */,
 				D5F97A962823443900005762 /* UserCollectionCell.swift in Sources */,
+				D5F97AAA2823CD2E00005762 /* PostTableCellViewModel.swift in Sources */,
 				D5F97A922823210500005762 /* Label.swift in Sources */,
 				D5F97A9E2823452900005762 /* List+CellControl.swift in Sources */,
 				D5F97A7028231ED100005762 /* PostsInteractor.swift in Sources */,
