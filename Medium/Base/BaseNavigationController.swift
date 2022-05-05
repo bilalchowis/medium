@@ -21,10 +21,18 @@ final class BaseNavigationController: UINavigationController {
     }
     
     func setupStyledBackButtonItem(for navigationItem: UINavigationItem) {
-        navigationItem.leftBarButtonItem = makeBackButtonItem()
+        navigationItem.leftBarButtonItem = makeBackButtonItem(image: "chevron.backward",
+                                                              target: self,
+                                                              selector: #selector(handleBackButtonClick))
     }
     
-    private func makeBackButtonItem() -> UIBarButtonItem {
+    func addRightBarButtonItem(for navigationItem: UINavigationItem, imageName: String, target: Any?, selector: Selector) {
+        navigationItem.rightBarButtonItem = makeBackButtonItem(image: imageName,
+                                                              target: target,
+                                                              selector: selector)
+    }
+    
+    private func makeBackButtonItem(image: String, target: Any?, selector: Selector) -> UIBarButtonItem {
         let frame = CGRect(origin: .zero, size: .init(width: 36, height: 36))
         let view = UIView(frame: frame)
         view.backgroundColor = .primaryBackground
@@ -35,8 +43,8 @@ final class BaseNavigationController: UINavigationController {
         view.layer.addSublayer(gradientLayer)
         
         let button = UIButton(frame: frame)
-        button.setImage(UIImage(systemName: "chevron.backward"), for: .normal)
-        button.addTarget(self, action: #selector(handleBackButtonClick), for: .touchUpInside)
+        button.setImage(UIImage(systemName: image), for: .normal)
+        button.addTarget(target, action: selector, for: .touchUpInside)
         view.addSubview(button)
         
         return UIBarButtonItem(customView: view)

@@ -42,6 +42,7 @@ class PostTableCell: BaseTableViewCell {
         let view = UIStackView()
         view.axis = .horizontal
         view.spacing = dwgConst.hStackSpacing
+        view.alignment = .leading
         view.translatesAutoresizingMaskIntoConstraints = false
         
         return view
@@ -60,6 +61,7 @@ class PostTableCell: BaseTableViewCell {
     private(set) lazy var postImageView: UIImageView = {
         let view = UIImageView()
         view.contentMode = .scaleAspectFit
+        view.clipsToBounds = true
         view.translatesAutoresizingMaskIntoConstraints = false
         
         return view
@@ -69,6 +71,7 @@ class PostTableCell: BaseTableViewCell {
         let view = UIStackView()
         view.axis = .vertical
         view.spacing = dwgConst.vStackSpacing
+        view.alignment = .leading
         view.translatesAutoresizingMaskIntoConstraints = false
         
         return view
@@ -80,6 +83,17 @@ class PostTableCell: BaseTableViewCell {
     }
     
     func configure(with viewModel: PostTableCellViewModel) {
+        userImageView.image = UIImage(named: viewModel.userImage)
+        nameLabel.text = viewModel.name
+        usernameLabel.text = viewModel.username
+        postLabel.text = viewModel.text
         
+        if let imagePath = viewModel.postImage {
+            postImageView.image = UIImage(named: imagePath)
+            postImageView.isHidden = false
+        } else {
+            postImageView.image = nil
+            postImageView.isHidden = true
+        }
     }
 }

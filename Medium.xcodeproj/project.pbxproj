@@ -63,6 +63,8 @@
 		D5F97AA82823CD2700005762 /* PostTableCell+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F97AA72823CD2700005762 /* PostTableCell+Layout.swift */; };
 		D5F97AAA2823CD2E00005762 /* PostTableCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F97AA92823CD2E00005762 /* PostTableCellViewModel.swift */; };
 		D5F97AAC2823CD3900005762 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F97AAB2823CD3900005762 /* BaseTableViewCell.swift */; };
+		D5F97AAE2823D1B100005762 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F97AAD2823D1B100005762 /* Post.swift */; };
+		D5F97AB12823D1FB00005762 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F97AB02823D1FB00005762 /* Server.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -124,6 +126,8 @@
 		D5F97AA72823CD2700005762 /* PostTableCell+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PostTableCell+Layout.swift"; sourceTree = "<group>"; };
 		D5F97AA92823CD2E00005762 /* PostTableCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableCellViewModel.swift; sourceTree = "<group>"; };
 		D5F97AAB2823CD3900005762 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		D5F97AAD2823D1B100005762 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		D5F97AB02823D1FB00005762 /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +168,7 @@
 				D5F97A34282317D000005762 /* Module */,
 				D5F97A432823186200005762 /* Extension */,
 				D5F97A35282317DE00005762 /* Resources */,
+				D5F97AAF2823D1E200005762 /* External */,
 				D5F97A2D282316E500005762 /* Info.plist */,
 			);
 			path = Medium;
@@ -267,6 +272,7 @@
 			isa = PBXGroup;
 			children = (
 				D5F97A5D28231DE100005762 /* User.swift */,
+				D5F97AAD2823D1B100005762 /* Post.swift */,
 				D5F97A8E282320AB00005762 /* LatoFont.swift */,
 			);
 			path = Model;
@@ -359,6 +365,14 @@
 				D5F97AA92823CD2E00005762 /* PostTableCellViewModel.swift */,
 			);
 			path = PostTableCell;
+			sourceTree = "<group>";
+		};
+		D5F97AAF2823D1E200005762 /* External */ = {
+			isa = PBXGroup;
+			children = (
+				D5F97AB02823D1FB00005762 /* Server.swift */,
+			);
+			path = External;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -465,7 +479,9 @@
 				D5F97A452823188000005762 /* ViewController+Layout.swift in Sources */,
 				D5F97A982823443E00005762 /* UserCollectionCell+Layout.swift in Sources */,
 				D5F97AA62823CD2000005762 /* PostTableCell.swift in Sources */,
+				D5F97AAE2823D1B100005762 /* Post.swift in Sources */,
 				D5F97A6E28231ECA00005762 /* PostsViewController+Layout.swift in Sources */,
+				D5F97AB12823D1FB00005762 /* Server.swift in Sources */,
 				D5F97A6C28231EC100005762 /* PostsViewController.swift in Sources */,
 				D5F97A962823443900005762 /* UserCollectionCell.swift in Sources */,
 				D5F97AAA2823CD2E00005762 /* PostTableCellViewModel.swift in Sources */,

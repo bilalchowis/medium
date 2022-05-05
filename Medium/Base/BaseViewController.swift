@@ -24,4 +24,11 @@ class BaseViewController: UIViewController {
     func setBackButton(for navigationItem: UINavigationItem) {
         (navigationController as? BaseNavigationController)?.setupStyledBackButtonItem(for: navigationItem)
     }
+    
+    func addRightButton(for navigationItem: UINavigationItem, imageName: String, target: Any?, selector: Selector) {
+        (navigationController as? BaseNavigationController)?.addRightBarButtonItem(for: navigationItem,
+                                                                                   imageName: imageName,
+                                                                                   target: target,
+                                                                                   selector: selector)
+    }
 }

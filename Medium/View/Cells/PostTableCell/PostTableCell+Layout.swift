@@ -15,6 +15,7 @@ extension PostTableCell {
         let hStackSpacing: CGFloat = 12
         let vStackSpacing: CGFloat = 16
         let userImageSize: CGFloat = 40
+        let postImageSize: CGFloat = 200
     }
     
     override func layoutSubviews() {
@@ -40,6 +41,7 @@ extension PostTableCell {
         setUserImageViewConstraints()
         setHStackConstraints()
         setVStackConstraints()
+        setPostImageConstraints()
     }
     
     // MARK: - Constraint
@@ -56,7 +58,6 @@ extension PostTableCell {
         NSLayoutConstraint.activate([
             hStack.topAnchor.constraint(equalTo: userImageView.topAnchor),
             hStack.leadingAnchor.constraint(equalTo: userImageView.trailingAnchor, constant: dwgConst.hStackLeft),
-            hStack.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -dwgConst.hPadding)
         ])
     }
     
@@ -66,6 +67,12 @@ extension PostTableCell {
             vStack.leadingAnchor.constraint(equalTo: hStack.leadingAnchor),
             vStack.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -dwgConst.hPadding),
             vStack.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -dwgConst.vPadding)
+        ])
+    }
+    
+    private func setPostImageConstraints() {
+        NSLayoutConstraint.activate([
+            postImageView.heightAnchor.constraint(lessThanOrEqualToConstant: dwgConst.postImageSize)
         ])
     }
 }

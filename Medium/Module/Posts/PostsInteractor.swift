@@ -6,13 +6,20 @@
 //
 
 protocol PostsBusinessLogic {
-    /* DEFAULT */
+    func fetchPosts(completion: @escaping ([PostTableCellViewModel]) -> Void)
 }
 
 class PostsInteractor: PostsBusinessLogic {
     let user: User
+    private let server = Server()
     
     init(user: User) {
         self.user = user
+    }
+    
+    func fetchPosts(completion: @escaping ([PostTableCellViewModel]) -> Void) {
+        server.fetchPosts { posts in
+            completion(posts.map(PostTableCellViewModel.init))
+        }
     }
 }
