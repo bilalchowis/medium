@@ -6,7 +6,7 @@
 //
 
 protocol CreatePostRoutingLogic {
-    /* DEFAULT */
+    func close()
 }
 
 class CreatePostRouter: BaseWireframe, CreatePostRoutingLogic {
@@ -17,5 +17,9 @@ class CreatePostRouter: BaseWireframe, CreatePostRoutingLogic {
         let interactor = CreatePostInteractor(user: user)
         let presenter = CreatePostPresenter(view: moduleViewController, interactor: interactor, router: self)
         moduleViewController.presenter = presenter
+    }
+    
+    func close() {
+        navigationController?.popViewController(animated: true)
     }
 }

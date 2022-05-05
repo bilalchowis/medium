@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D5C2569328246BE7002D43A1 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C2569228246BE7002D43A1 /* TextView.swift */; };
+		D5C2569528247516002D43A1 /* PostNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C2569428247516002D43A1 /* PostNotification.swift */; };
 		D5F97A20282316E200005762 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F97A1F282316E200005762 /* AppDelegate.swift */; };
 		D5F97A22282316E200005762 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F97A21282316E200005762 /* SceneDelegate.swift */; };
 		D5F97A29282316E500005762 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5F97A28282316E500005762 /* Assets.xcassets */; };
@@ -70,6 +71,7 @@
 
 /* Begin PBXFileReference section */
 		D5C2569228246BE7002D43A1 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
+		D5C2569428247516002D43A1 /* PostNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostNotification.swift; sourceTree = "<group>"; };
 		D5F97A1C282316E200005762 /* Medium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Medium.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5F97A1F282316E200005762 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5F97A21282316E200005762 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -276,6 +278,7 @@
 				D5F97A5D28231DE100005762 /* User.swift */,
 				D5F97AAD2823D1B100005762 /* Post.swift */,
 				D5F97A8E282320AB00005762 /* LatoFont.swift */,
+				D5C2569428247516002D43A1 /* PostNotification.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -468,6 +471,7 @@
 				D5F97A4A2823191400005762 /* BaseWireframe.swift in Sources */,
 				D5F97A3A2823183B00005762 /* UserPickerViewController.swift in Sources */,
 				D5F97AAC2823CD3900005762 /* BaseTableViewCell.swift in Sources */,
+				D5C2569528247516002D43A1 /* PostNotification.swift in Sources */,
 				D5F97A3C2823184500005762 /* UserPickerViewController+Layout.swift in Sources */,
 				D5F97AA82823CD2700005762 /* PostTableCell+Layout.swift in Sources */,
 				D5F97AA2282365D200005762 /* View+DropShadow.swift in Sources */,

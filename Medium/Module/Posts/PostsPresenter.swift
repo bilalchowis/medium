@@ -24,7 +24,11 @@ class PostsPresenter: PostsPresentationLogic {
     
     func viewDidLoad() {
         view.startLoader()
-        interactor.fetchPosts { [weak self] items in            
+        willFetch()
+    }
+    
+    func willFetch() {
+        interactor.fetchPosts { [weak self] items in
             self?.view.updateUI(with: items)
         }
     }

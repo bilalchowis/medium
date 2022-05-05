@@ -8,7 +8,9 @@
 import UIKit
 
 protocol CreatePostPresentationLogic: PresentationProtocol {
-    /* DEFAULT */
+    func willSet(post: String)
+    func willSet(image: UIImage)
+    func willSubmit()
 }
 
 class CreatePostPresenter: CreatePostPresentationLogic {
@@ -24,5 +26,18 @@ class CreatePostPresenter: CreatePostPresentationLogic {
     
     func viewDidLoad() {
         
+    }
+    
+    func willSet(post: String) {
+        interactor.set(post: post)
+    }
+    
+    func willSet(image: UIImage) {
+        interactor.set(image: image)
+    }
+    
+    func willSubmit() {
+        interactor.submit()
+        router.close()
     }
 }

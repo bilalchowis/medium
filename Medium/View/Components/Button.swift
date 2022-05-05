@@ -25,6 +25,12 @@ class Button: UIButton {
         CGSize(width: UIScreen.main.bounds.width - 60, height: 48)
     }
     
+    override var isEnabled: Bool {
+        didSet {
+            gradientLayer.opacity = isEnabled ? 1.0 : 0.3
+        }
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
