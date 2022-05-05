@@ -8,6 +8,8 @@
 import UIKit
 
 protocol PostsDisplayLogic: AnyObject {
+    func startLoader()
+    func stopLoader()
     func updateUI(with items: [PostTableCellViewModel])
 }
 
@@ -21,7 +23,15 @@ class PostsViewController: BaseViewController, PostsDisplayLogic {
         view.showsVerticalScrollIndicator = false
         view.delegate = self
         view.dataSource = self
+        view.backgroundColor = .clear
         view.translatesAutoresizingMaskIntoConstraints = false
+        
+        return view
+    }()
+    
+    private(set) lazy var loader: UIActivityIndicatorView = {
+        let view = UIActivityIndicatorView(style: .medium)
+        view.translatesAutoresizingMaskIntoConstraints =  false
         
         return view
     }()
@@ -29,6 +39,8 @@ class PostsViewController: BaseViewController, PostsDisplayLogic {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.backgroundColor = .primaryBackground
+        setNavigationTitle("Posts")
         setBackButton(for: navigationItem)
         addRightButton(for: navigationItem,
                        imageName: "plus",
@@ -37,17 +49,25 @@ class PostsViewController: BaseViewController, PostsDisplayLogic {
         presenter.viewDidLoad()
     }
     
+    func startLoader() {
+        loader.startAnimating()
+    }
+    
+    func stopLoader() {
+        loader.stopAnimating()
+    }
+    
     func updateUI(with items: [PostTableCellViewModel]) {
-        self.items = items
-        
-        DispatchQueue.main.async {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            self.stopLoader()
+            self.items = items
             self.tableView.reloadData()
         }
     }
     
     // MARK: - Action
     @objc private func handleAddPostButtonClick() {
-        
+        presenter.willOpenCreatePost()
     }
 }
 

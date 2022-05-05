@@ -10,7 +10,9 @@ protocol CreatePostBusinessLogic {
 }
 
 class CreatePostInteractor: CreatePostBusinessLogic {
-    init() {
-        
+    let user: User
+    
+    init(user: User) {
+        self.user = user
     }
 }

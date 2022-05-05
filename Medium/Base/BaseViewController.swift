@@ -14,6 +14,12 @@ class BaseViewController: UIViewController {
         return navigationController?.navigationBar.isHidden ?? true
     }
     
+    deinit {
+        #if DEBUG
+        print("\(String(describing: self)) is removed from memory")
+        #endif
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,5 +36,15 @@ class BaseViewController: UIViewController {
                                                                                    imageName: imageName,
                                                                                    target: target,
                                                                                    selector: selector)
+    }
+    
+    func setNavigationTitle(_ title: String) {
+        let label = Label()
+        label.setFont(.headline)
+        label.setTextColor(.primaryLabel)
+        label.text = title
+        label.sizeToFit()
+        
+        navigationItem.titleView = label
     }
 }

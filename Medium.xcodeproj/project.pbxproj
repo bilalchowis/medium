@@ -189,8 +189,8 @@
 				D5F97A332823178300005762 /* Main */,
 				D5F97A36282317E500005762 /* Launch */,
 				D5F97A372823181C00005762 /* UserPicker */,
-				D5F97A6028231E8300005762 /* CreatePost */,
 				D5F97A5F28231E7600005762 /* Posts */,
+				D5F97A6028231E8300005762 /* CreatePost */,
 			);
 			path = Module;
 			sourceTree = "<group>";

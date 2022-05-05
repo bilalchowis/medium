@@ -8,7 +8,7 @@
 import UIKit
 
 protocol PostsPresentationLogic: PresentationProtocol {
-    /* DEFAULT */
+    func willOpenCreatePost()
 }
 
 class PostsPresenter: PostsPresentationLogic {
@@ -23,8 +23,13 @@ class PostsPresenter: PostsPresentationLogic {
     }
     
     func viewDidLoad() {
-        interactor.fetchPosts { [weak self] items in
+        view.startLoader()
+        interactor.fetchPosts { [weak self] items in            
             self?.view.updateUI(with: items)
         }
+    }
+    
+    func willOpenCreatePost() {
+        router.openCreatePost(interactor.user)
     }
 }

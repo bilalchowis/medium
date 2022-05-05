@@ -10,11 +10,11 @@ protocol CreatePostRoutingLogic {
 }
 
 class CreatePostRouter: BaseWireframe, CreatePostRoutingLogic {
-    init() {
+    init(user: User) {
         let moduleViewController = CreatePostViewController()
         super.init(viewController: moduleViewController)
         
-        let interactor = CreatePostInteractor()
+        let interactor = CreatePostInteractor(user: user)
         let presenter = CreatePostPresenter(view: moduleViewController, interactor: interactor, router: self)
         moduleViewController.presenter = presenter
     }

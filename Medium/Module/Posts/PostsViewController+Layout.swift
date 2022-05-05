@@ -14,10 +14,12 @@ extension PostsViewController {
     
     override func embedSubviews() {
         view.addSubview(tableView)
+        view.addSubview(loader)
     }
     
     override func setSubviewsConstraints() {
         setTableViewConstraints()
+        setLoaderConstraints()
     }
     
     // MARK: - Constraint
@@ -27,6 +29,13 @@ extension PostsViewController {
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+        ])
+    }
+    
+    private func setLoaderConstraints() {
+        NSLayoutConstraint.activate([
+            loader.centerXAnchor.constraint(equalTo: tableView.centerXAnchor),
+            loader.centerYAnchor.constraint(equalTo: tableView.centerYAnchor)
         ])
     }
 }

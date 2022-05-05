@@ -5,7 +5,10 @@
 //  Created by Bilal Bakhrom on 04/05/2022.
 //
 
+import Foundation
+
 protocol PostsBusinessLogic {
+    var user: User { get }
     func fetchPosts(completion: @escaping ([PostTableCellViewModel]) -> Void)
 }
 
@@ -18,8 +21,10 @@ class PostsInteractor: PostsBusinessLogic {
     }
     
     func fetchPosts(completion: @escaping ([PostTableCellViewModel]) -> Void) {
-        server.fetchPosts { posts in
-            completion(posts.map(PostTableCellViewModel.init))
+        DispatchQueue.global().async {
+            self.server.fetchPosts { posts in
+                completion(posts.map(PostTableCellViewModel.init))
+            }
         }
     }
 }

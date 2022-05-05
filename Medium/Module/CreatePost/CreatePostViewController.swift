@@ -16,6 +16,11 @@ class CreatePostViewController: BaseViewController, CreatePostDisplayLogic {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        view.backgroundColor = .primaryBackground
+        setBackButton(for: navigationItem)
+        setNavigationTitle("Create Post")
+        setupSubviews()
         presenter.viewDidLoad()
     }
 }

@@ -6,7 +6,7 @@
 //
 
 protocol PostsRoutingLogic {
-    /* DEFAULT */
+    func openCreatePost(_ user: User)
 }
 
 class PostsRouter: BaseWireframe, PostsRoutingLogic {
@@ -17,5 +17,10 @@ class PostsRouter: BaseWireframe, PostsRoutingLogic {
         let interactor = PostsInteractor(user: user)
         let presenter = PostsPresenter(view: moduleViewController, interactor: interactor, router: self)
         moduleViewController.presenter = presenter
+    }
+    
+    func openCreatePost(_ user: User) {
+        let router = CreatePostRouter(user: user)
+        navigationController?.pushWireframe(router)
     }
 }
