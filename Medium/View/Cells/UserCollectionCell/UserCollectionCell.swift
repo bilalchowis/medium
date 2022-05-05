@@ -22,6 +22,7 @@ class UserCollectionCell: BaseCollectionViewCell {
     private(set) lazy var userImageView: UIImageView = {
         let view = UIImageView()
         view.clipsToBounds = true
+        view.contentMode = .scaleAspectFill
         view.translatesAutoresizingMaskIntoConstraints = false
         
         return view
@@ -53,8 +54,10 @@ class UserCollectionCell: BaseCollectionViewCell {
         containerView.backgroundColor = viewModel.backgroundColor
         nameLabel.text = viewModel.name
         
-        if let imagePath = viewModel.imagePath {
-            userImageView.image = UIImage(named: imagePath)
+        DispatchQueue.main.async {
+            if let imagePath = viewModel.imagePath {
+                self.userImageView.image = UIImage(named: imagePath)
+            }
         }
     }
 }

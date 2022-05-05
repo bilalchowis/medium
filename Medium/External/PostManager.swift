@@ -94,7 +94,7 @@ class PostManager: SingleSourceProtocol {
         posts = [
             Post(user: User(id: 0,
                             firstName: "Elon",
-                            lastName: "Mask",
+                            lastName: "Musk",
                             userName: "engineer",
                             imagePath: "user-1"),
                  post: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu orci ac sapien finibus suscipit. Quisque quis erat ac metus tincidunt eleifend vel non nisi. Aliquam facilisis iaculis ornare.",

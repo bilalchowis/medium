@@ -15,6 +15,7 @@ class PostTableCell: BaseTableViewCell {
         view.layer.borderColor = UIColor.white.cgColor
         view.layer.borderWidth = 1
         view.clipsToBounds = true
+        view.contentMode = .scaleAspectFill
         view.translatesAutoresizingMaskIntoConstraints = false
         
         return view
